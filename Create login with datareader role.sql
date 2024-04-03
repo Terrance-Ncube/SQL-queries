@@ -1,0 +1,12 @@
+USE [master]
+GO
+CREATE LOGIN [Lwethu] WITH PASSWORD=N'1234', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+GO
+USE [AdventureWorks2019]
+GO
+CREATE USER [Lwethu] FOR LOGIN [Lwethu]
+GO
+USE [AdventureWorks2019]
+GO
+ALTER ROLE [db_datareader] ADD MEMBER [Lwethu]
+GO
