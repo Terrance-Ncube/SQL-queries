@@ -1,0 +1,34 @@
+what are filegroups?
+
+Filegroups are a logical construct used to separate tables and indexes from each other, files are the physical construct used to store information (log and data) about the database.
+
+There are two files, one for data and one for the log.
+
+	The Data files contain data, and objects such as tables, indexes,
+	   stored procs, and views.
+	The Log files contain information that is required to recover all transactions
+	   in the database.
+	 
+	Data files can be grouped together in filegroups for allocation and 
+	administration purposes.
+	
+	
+	
+DATABASE FILES - 3 TYPES
+
+Primary
+	Contains startup information for the DB and points to the other files
+	in the DB. Every DB has one primary data file with a recommended 
+	extension of .mdf
+	
+	
+Secondary
+	Optional user-defined data files. Can be spread across multiple disks with
+	a recommended extension of .ndf.
+	
+	
+Transaction Log
+	holds infomation used to recover the database. Aleast one log     
+	file must be
+	created for each DB with a extension of .ldf.
+	
